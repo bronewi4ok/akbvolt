@@ -1,0 +1,10 @@
+node_modules
+.vscode
+.git
+.jshintrc
+2. GULP PUG
+package-lock.json
+AKBVOLT.zip
+gulpfile.js
+package.json
+src

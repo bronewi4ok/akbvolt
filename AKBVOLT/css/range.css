@@ -1,0 +1,495 @@
+:root {
+  --fnt_main: "Inter", sans-serif;
+  --dark_hue: 240;
+  --dark_saturation: 100%;
+  --dark_lightness: 2.9411764706%;
+  --light_hue: 0;
+  --light_saturation: 0%;
+  --light_lightness: 100%;
+  --prim_hue: 21.6470588235;
+  --prim_saturation: 100%;
+  --prim_lightness: 50%;
+  --prim_light_hue: 22.1052631579;
+  --prim_light_saturation: 100%;
+  --prim_light_lightness: 92.5490196078%;
+  --sec_hue: 216.0550458716;
+  --sec_saturation: 91.5966386555%;
+  --sec_lightness: 46.6666666667%;
+  --sec_light_hue: 212.0930232558;
+  --sec_light_saturation: 100%;
+  --sec_light_lightness: 91.568627451%;
+  --success_hue: 133.1868131868;
+  --success_saturation: 37.7593360996%;
+  --success_lightness: 52.7450980392%;
+  --info_hue: 0;
+  --info_saturation: 0%;
+  --info_lightness: 70.5882352941%;
+  --text_hue: 0;
+  --text_saturation: 0%;
+  --text_lightness: 19.6078431373%;
+  --acent_hue: 0;
+  --acent_saturation: 100%;
+  --acent_lightness: 73.5294117647%;
+  --alarm_hue: 358.2524271845;
+  --alarm_saturation: 82.4%;
+  --alarm_lightness: 49.0196078431%;
+  --link_hue: 208.59375;
+  --link_saturation: 52.0325203252%;
+  --link_lightness: 51.7647058824%;
+  --simple_hue: 0;
+  --simple_saturation: 0%;
+  --simple_lightness: 47.0588235294%;
+  --back_hue: 0;
+  --back_saturation: 0%;
+  --back_lightness: 96.0784313725%;
+  --border_hue: 0;
+  --border_saturation: 0%;
+  --border_lightness: 86.2745098039%;
+  --divider_hue: 0;
+  --divider_saturation: 0%;
+  --divider_lightness: 94.1176470588%;
+  --focus_hue: 200.1136363636;
+  --focus_saturation: 73.9495798319%;
+  --focus_lightness: 53.3333333333%;
+  --error_hue: 200.1136363636;
+  --error_saturation: 73.9495798319%;
+  --error_lightness: 53.3333333333%;
+  --minor_hue: 240;
+  --minor_saturation: 100%;
+  --minor_lightness: 50%;
+  --scrollBar-color: hsla(calc(var(--prim_hue) + 0), calc(var(--prim_saturation) + 0%), calc(var(--prim_lightness) + 0%), 1);
+  --scrollBar-width: 8px;
+  --scrollBar-height: auto;
+  --scrollBar-radius: 8px;
+  --scrollBar-gap: 4px;
+  --text_selection_bg: hsla(calc(var(--prim_hue) + 0), calc(var(--prim_saturation) + 0%), calc(var(--prim_lightness) + 0%), 1);
+  --text_selection_clr: hsla(calc(var(--light_hue) + 0), calc(var(--light_saturation) + 0%), calc(var(--light_lightness) + 0%), 1);
+  --select-scroll: hsla(calc(var(--divider_hue) + 0), calc(var(--divider_saturation) + 0%), calc(var(--divider_lightness) + 0%), 1);
+}
+
+:root {
+  --cntr: 1140px;
+}
+
+.price__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price__inputs {
+  display: flex;
+  align-items: center;
+}
+
+.price__inputs {
+  margin-bottom: 28px;
+}
+
+.price__item {
+  flex: 1 1;
+}
+
+.price__input {
+  background: #F5F5F5;
+  padding: 12px;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.price__input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #253A48;
+}
+
+.price__input::-moz-placeholder {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #253A48;
+}
+
+.price__input:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #253A48;
+}
+
+.price__input::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #253A48;
+}
+
+.price__input::placeholder {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #253A48;
+}
+
+.price__div {
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  color: #253A48;
+  flex: var(--fl, 0 0 auto);
+  width: calc(100% / 229 * 30);
+  min-width: 0;
+}
+
+.noUi-target {
+  height: 2px;
+  position: relative;
+  margin: 20px 11px 50px;
+  background-color: #eaeaea;
+}
+
+.noUi-target::before,
+.noUi-target::after {
+  content: "";
+  background-color: #eaeaea;
+  width: 11px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+}
+
+.noUi-target::before {
+  left: -11px;
+}
+
+.noUi-target::after {
+  right: -11px;
+}
+
+.noUi-target .noUi-connect {
+  background-color: red;
+}
+
+.noUi-target .noUi-handle {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  border: 2px solid hsla(calc(var(--prim_hue) + 0), calc(var(--prim_saturation) + 0%), calc(var(--prim_lightness) + 0%), 1);
+  background-color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  right: -11.5px;
+  top: -10px;
+}
+
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.noUi-base,
+.noUi-connects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper for all connect elements.
+ */
+
+.noUi-connects {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.noUi-connect,
+.noUi-origin {
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: 0 0;
+  -webkit-transform-style: flat;
+  transform-style: flat;
+}
+
+.noUi-connect {
+  height: 100%;
+  width: 100%;
+}
+
+.noUi-origin {
+  height: 10%;
+  width: 10%;
+}
+
+/* Offset direction
+ */
+
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+  left: 0;
+  right: auto;
+}
+
+/* Give origins 0 height/width so they don't interfere with clicking the
+ * connect elements.
+ */
+
+.noUi-vertical .noUi-origin {
+  width: 0;
+}
+
+.noUi-horizontal .noUi-origin {
+  height: 0;
+}
+
+.noUi-touch-area {
+  height: 100%;
+  width: 100%;
+}
+
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+
+/* Slider size and handle placement;
+ */
+
+/* Styling;
+ * Giving the connect element a border radius causes issues with using transform: scale
+ */
+
+/* Handles and cursors;
+ */
+
+.noUi-draggable {
+  cursor: ew-resize;
+}
+
+.noUi-vertical .noUi-draggable {
+  cursor: ns-resize;
+}
+
+.noUi-active {
+  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
+}
+
+/* Disabled state;
+ */
+
+[disabled] .noUi-connect {
+  background: #b8b8b8;
+}
+
+[disabled].noUi-target,
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+  cursor: not-allowed;
+}
+
+/* Base;
+ *
+ */
+
+.noUi-pips,
+.noUi-pips * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.noUi-pips {
+  position: absolute;
+  color: #999;
+}
+
+/* Values;
+ *
+ */
+
+.noUi-value {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px;
+}
+
+/* Markings;
+ *
+ */
+
+.noUi-marker {
+  position: absolute;
+  background: #ccc;
+}
+
+.noUi-marker-sub {
+  background: #aaa;
+}
+
+.noUi-marker-large {
+  background: #aaa;
+}
+
+/* Horizontal layout;
+ *
+ */
+
+.noUi-pips-horizontal {
+  padding: 10px 0;
+  height: 80px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.noUi-value-horizontal {
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+}
+
+.noUi-rtl .noUi-value-horizontal {
+  -webkit-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+}
+
+.noUi-marker-horizontal.noUi-marker {
+  margin-left: -1px;
+  width: 2px;
+  height: 5px;
+}
+
+.noUi-marker-horizontal.noUi-marker-sub {
+  height: 10px;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+  height: 15px;
+}
+
+/* Vertical layout;
+ *
+ */
+
+.noUi-pips-vertical {
+  padding: 0 10px;
+  height: 100%;
+  top: 0;
+  left: 100%;
+}
+
+.noUi-value-vertical {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding-left: 25px;
+}
+
+.noUi-rtl .noUi-value-vertical {
+  -webkit-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+}
+
+.noUi-marker-vertical.noUi-marker {
+  width: 5px;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.noUi-marker-vertical.noUi-marker-sub {
+  width: 10px;
+}
+
+.noUi-marker-vertical.noUi-marker-large {
+  width: 15px;
+}
+
+.noUi-tooltip {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: right;
+  color: #00000F;
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.noUi-horizontal .noUi-tooltip {
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: -22px;
+}
+
+.noUi-vertical .noUi-tooltip {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  top: 50%;
+  right: 120%;
+}
+
+.noUi-horizontal .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+  left: auto;
+  bottom: 10px;
+}
+
+.noUi-vertical .noUi-origin > .noUi-tooltip {
+  -webkit-transform: translate(0, -18px);
+  transform: translate(0, -18px);
+  top: auto;
+  right: 28px;
+}
+
+@media all and (max-width: 1199.98px) {
+  :root {
+    --cntr: 960px;
+  }
+}
+
+@media all and (max-width: 991.98px) {
+  :root {
+    --cntr: 720px;
+  }
+}
+
+@media all and (max-width: 767.98px) {
+  :root {
+    --cntr: 540px;
+  }
+
+  .noUi-tooltip {
+    font-size: 12px;
+  }
+}
