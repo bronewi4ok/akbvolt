@@ -364,6 +364,7 @@ progress {
 
 .order-table__price,
 .product-price__footer,
+.product-price__header,
 .filters__item,
 .filters__head,
 .header-cart,
@@ -409,10 +410,6 @@ progress {
   flex: 0 0 0.0625rem;
   height: 100%;
   background-color: hsla(calc(var(--divider_hue) + 0), calc(var(--divider_saturation) + 0%), calc(var(--divider_lightness) + 0%), 1);
-}
-
-.border {
-  border: 0.0625rem solid hsla(calc(var(--border_hue) + 0), calc(var(--border_saturation) + 0%), calc(var(--border_lightness) + 0%), 1);
 }
 
 .back {
@@ -610,10 +607,6 @@ progress {
 
 .ml_30 {
   margin-left: 1.875rem;
-}
-
-.ml_32 {
-  margin-left: 2rem;
 }
 
 .p_24 {
@@ -1824,12 +1817,16 @@ progress {
 
 .product-preview__thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .product-preview__pic {
   display: block;
   position: relative;
   width: 65.1982378855%;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .product-preview__pic::before {
@@ -1847,7 +1844,18 @@ progress {
   clear: both;
 }
 
-.product-preview__badge {
+.product-preview__pic:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.product-preview__img {
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.product-preview__rebate {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1984,7 +1992,7 @@ progress {
   display: block;
 }
 
-.product-preview_discount .product-preview__badge {
+.product-preview_discount .product-preview__rebate {
   display: block;
 }
 
@@ -2090,6 +2098,26 @@ progress {
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   opacity: 0.5;
+}
+
+.tick-btn_lg .tick-btn__box {
+  padding: 0.75rem 2rem;
+}
+
+.tick-btn_lg .tick-btn__caption {
+  color: hsla(calc(var(--prim_hue) + 0), calc(var(--prim_saturation) + 0%), calc(var(--prim_lightness) + 0%), 1);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.tick-btn_md .tick-btn__box {
+  padding: 0.75rem 0.75rem;
+}
+
+.tick-btn_md .tick-btn__caption {
+  color: hsla(calc(var(--prim_hue) + 0), calc(var(--prim_saturation) + 0%), calc(var(--prim_lightness) + 0%), 1);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .reviews-poster {
@@ -2983,8 +3011,13 @@ progress {
   margin-bottom: 1.375rem;
 }
 
-.filters__block:not(:last-child) .filters__body {
-  padding-bottom: 1.5rem;
+.filters__block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.filters__body {
+  padding-bottom: 0.625rem;
+  padding-top: 1.5rem;
 }
 
 .filters__head {
@@ -2994,7 +3027,6 @@ progress {
   line-height: 1.4;
   color: rgba(var(--prim), 1);
   padding-right: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 .filters__angle {
@@ -3016,7 +3048,7 @@ progress {
   object-fit: contain;
 }
 
-.filters__item:not(:last-child) {
+.filters__item {
   padding-bottom: 0.875rem;
 }
 
@@ -3030,6 +3062,25 @@ progress {
   line-height: 140%;
   color: rgba(var(--light), 1);
   margin-left: 0.3125rem;
+}
+
+.filters__more {
+  font-size: 0.9375rem;
+  line-height: 130%;
+  color: #4487C5;
+  cursor: pointer;
+}
+
+.filters__more:hover {
+  color: hsla(calc(var(--prim_hue) + 0), calc(var(--prim_saturation) + 0%), calc(var(--prim_lightness) + 0%), 1);
+}
+
+.filters__more::before {
+  content: attr(data-more);
+}
+
+.filters__more[aria-expanded=true]::before {
+  content: attr(data-less);
 }
 
 .previews__row {
@@ -3282,6 +3333,18 @@ progress {
   border-radius: 0.625rem;
   background-color: hsla(calc(var(--light_hue) + 0), calc(var(--light_saturation) + 0%), calc(var(--light_lightness) + 0%), 1);
   padding: 3.125rem;
+}
+
+.product-price__header {
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-bottom: -0.75rem;
+  padding-bottom: 1.25rem;
+}
+
+.product-price__tick {
+  padding-left: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .product-price__title {
@@ -3679,14 +3742,6 @@ progress {
     --fl_flex: 0 0 auto;
     --fl_width: calc(100% / var(--fl_base, 12) * var(--fl_col, 1));
     --fl_col: 5;
-  }
-
-  .d_lg_none {
-    display: none !important;
-  }
-
-  .d_lg_block {
-    display: block !important;
   }
 
   .d_lg_flex {

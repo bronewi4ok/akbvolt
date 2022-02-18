@@ -4215,6 +4215,13 @@ window.addEventListener('resize', (e) => {
     accordion = null;
   }
 });
+
+
+
+
+
+const filters__block = Array.from(document.querySelectorAll('.filters__block'));
+new Accordion(filters__block, {});
 ;
 let headerSearch = document.querySelector('.header-search');
 let headerSearchInput = document.querySelector('.header-search__input');
